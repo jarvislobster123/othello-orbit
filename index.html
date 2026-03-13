@@ -15,7 +15,7 @@
           <p>Claim the board one orbit at a time. Play a fast, tactile version of Othello with legal move highlights, live scoring, helpful hints, and a clean glass-panel interface.</p>
           <div class="meta">
             <span class="turn-indicator">Turn <span class="turn-dot" data-turn-chip data-player="black"></span></span>
-            <span class="badge" data-status>Black to move.</span>
+            <span class="badge" data-status aria-live="polite">Black to move.</span>
           </div>
         </div>
         <aside class="sidebar panel">
@@ -30,16 +30,23 @@
             <button class="button button-secondary" data-action="hint">Show hint</button>
             <button class="button button-ghost" data-action="theme">Toggle theme</button>
           </div>
-          <p class="hint" data-hint>Hint panel ready.</p>
+          <p class="hint" data-hint aria-live="polite">Hint panel ready.</p>
           <div class="moves">
             <h3>Move log</h3>
-            <ol data-moves></ol>
+            <ol data-moves aria-live="polite"></ol>
           </div>
         </aside>
       </section>
       <section class="game-shell">
         <div class="board-panel panel">
-          <div class="board" data-board aria-label="Othello game board"></div>
+          <div
+            class="board"
+            data-board
+            role="grid"
+            aria-label="Othello game board"
+            aria-describedby="board-help"
+          ></div>
+          <p id="board-help" class="board-help">Use arrow keys to move around the board, then press Enter or Space to place a disc on a legal square.</p>
         </div>
         <aside class="sidebar panel">
           <h2>How it plays</h2>
