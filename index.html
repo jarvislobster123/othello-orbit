@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Othello Orbit</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="hero">
+        <div class="hero-copy panel">
+          <span class="badge">Abstract strategy · Local multiplayer</span>
+          <h1>Othello Orbit</h1>
+          <p>Claim the board one orbit at a time. Play a fast, tactile version of Othello with legal move highlights, live scoring, and a clean glass-panel interface.</p>
+          <div class="meta">
+            <span class="turn-indicator">Turn <span class="turn-dot" data-turn-chip data-player="black"></span></span>
+            <span class="badge" data-status>Black to move.</span>
+          </div>
+        </div>
+        <aside class="sidebar panel">
+          <h2>Match panel</h2>
+          <div class="score-grid">
+            <div class="score-card"><span>Black</span><strong data-score-black>2</strong></div>
+            <div class="score-card"><span>White</span><strong data-score-white>2</strong></div>
+          </div>
+          <button class="button" data-action="restart">Restart match</button>
+          <div class="moves">
+            <h3>Move log</h3>
+            <ol data-moves></ol>
+          </div>
+        </aside>
+      </section>
+      <section class="game-shell">
+        <div class="board-panel panel">
+          <div class="board" data-board aria-label="Othello game board"></div>
+        </div>
+        <aside class="sidebar panel">
+          <h2>How it plays</h2>
+          <p>Pick any glowing square. A move is legal when it sandwiches one or more opposing discs between your new disc and another of your own.</p>
+          <p>When both players run out of legal moves, the fuller color wins.</p>
+        </aside>
+      </section>
+    </div>
+    <script src="game.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
